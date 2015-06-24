@@ -23,51 +23,51 @@ while guessesTaken < 3:
         print('Your guess is too high for the first digit.')
 
     if guess_1 == digit_b or guess_1 == digit_c:
-		print('The digit\'s right but the placement is wrong!')
+	print('The digit\'s right but the placement is wrong!')
 	
-	if guess_1 == digit_a:
-		break
+    if guess_1 == digit_a:
+	break
 	
 while guessesTaken < 3:
     print('Take a guess for the second digit.')
-	guess_2 = input()
+    guess_2 = input()
     guess_2 = int(guess_2)
 	
-	guessesTaken = guessesTaken + 1
+    guessesTaken = guessesTaken + 1
 	
-	if guess_2 < digit_2:
-		print('Your guess is too low for the second digit')
+    if guess_2 < digit_2:
+	print('Your guess is too low for the second digit')
 	
-	if guess_2 > digit_2:
-		print('The guess is too high for the second digit')
-		
-	if guess_2 == digit_a or guess_2 == digit_c:
-		print('Your digit\'s right but the placement is wrong!')
-		
-	if guess_2 == digit_b:
-		break
+    if guess_2 > digit_2:
+	print('The guess is too high for the second digit')
+	
+    if guess_2 == digit_a or guess_2 == digit_c:
+	print('Your digit\'s right but the placement is wrong!')
+	
+    if guess_2 == digit_b:
+	break
 	
 while guessesTaken < 3:
-	print('Take a guess for the second digit.')	
-	guess_3 = input()
+    print('Take a guess for the second digit.')	
+    guess_3 = input()
     guess_3 = int(guess_3)
 	
-	if guess_3 < digit_c:
-		print('Your guess is too low for the third digit.') 
+    if guess_3 < digit_c:
+	print('Your guess is too low for the third digit.') 
 	
-	if guess_3 > digit_C:
-		print('your guess is too high for the third digit')
+    if guess_3 > digit_C:
+	print('your guess is too high for the third digit')
 	
-	if guess_3 == digit_a or guess_3 == digit_b:
-		print('Your digit\'s right but the placement is wrong!')
+    if guess_3 == digit_a or guess_3 == digit_b:
+	print('Your digit\'s right but the placement is wrong!')
 	
-	if guess_3 == digit_c:
-		break
+    if guess_3 == digit_c:
+	break
 
-	guess = guess_1,guess_2,guess_3
+guess = guess_1,guess_2,guess_3
 	
 if guess == number:
-	guessesTaken = str(guessesTaken)
+    guessesTaken = str(guessesTaken)
     print('Good job! You guessed the number in ' + guessesTaken + ' guesses!')
 
 if guess != number:
