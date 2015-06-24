@@ -1,3 +1,4 @@
+#Author: Asad Aftab
 # This is a guess the number game.
 import random
 
