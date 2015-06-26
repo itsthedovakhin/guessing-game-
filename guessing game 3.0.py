@@ -5,11 +5,14 @@ import random
 guessesTaken = 0
 
 digit_a  = random.randint(1, 9)
-digit_b  = random.randint(1, 9)
+digit_b  = random.randint(1, 9) 
 digit_c  = random.randint(1, 9) 
 
 number = digit_a,digit_b,digit_c
-while guessesTaken < 3:
+print('You have eight tries to guess all the digits!')
+print('To guess the 2nd and 3rd digits you need to guess the 1st digit correctly!')
+
+while guessesTaken < 8:
     print('Take a guess for the first digit.') 
     guess_1 = input()
     guess_1 = int(guess_1)
@@ -25,37 +28,37 @@ while guessesTaken < 3:
     if guess_1 == digit_b or guess_1 == digit_c:
 		print('The digit\'s right but the placement is wrong!')
 	
-	if guess_1 == digit_a:
+    if guess_1 == digit_a:
 		break
-	
-while guessesTaken < 3:
-    print('Take a guess for the second digit.')
+
+while guessesTaken < 8:
+	print('Take a guess for the second digit.')
 	guess_2 = input()
-    guess_2 = int(guess_2)
+	guess_2 = int(guess_2)
 	
 	guessesTaken = guessesTaken + 1
 	
-	if guess_2 < digit_2:
+	if guess_2 < digit_b:
 		print('Your guess is too low for the second digit')
 	
-	if guess_2 > digit_2:
+	if guess_2 > digit_b:
 		print('The guess is too high for the second digit')
-		
+	
 	if guess_2 == digit_a or guess_2 == digit_c:
 		print('Your digit\'s right but the placement is wrong!')
-		
+	
 	if guess_2 == digit_b:
 		break
-	
-while guessesTaken < 3:
-	print('Take a guess for the second digit.')	
+
+while guessesTaken < 8:
+	print('Take a guess for the third digit.')	
 	guess_3 = input()
-    guess_3 = int(guess_3)
+	guess_3 = int(guess_3)
 	
 	if guess_3 < digit_c:
 		print('Your guess is too low for the third digit.') 
 	
-	if guess_3 > digit_C:
+	if guess_3 > digit_c:
 		print('your guess is too high for the third digit')
 	
 	if guess_3 == digit_a or guess_3 == digit_b:
@@ -64,10 +67,10 @@ while guessesTaken < 3:
 	if guess_3 == digit_c:
 		break
 
-	guess = guess_1,guess_2,guess_3
+guess = guess_1,guess_2,guess_3
 	
 if guess == number:
-	guessesTaken = str(guessesTaken)
+    guessesTaken = str(guessesTaken)
     print('Good job! You guessed the number in ' + guessesTaken + ' guesses!')
 
 if guess != number:
