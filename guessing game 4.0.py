@@ -11,7 +11,7 @@ digit_c  = random.randint(1, 9)
 number = digit_a,digit_b,digit_c
 print('You have eight tries to guess all the digits!')
 print('To guess the 2nd and 3rd digits you need to guess the 1st digit correctly!')
-print number
+
 
 while guessesTaken < 12:
 	print('Take a guess for the first digit.') 
